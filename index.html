@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="app.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>汉语</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="app.css"> <!-- CSS-г холбоно -->
+    </head>
 </head>
 <body>
+
+<!-- Admin Login Section -->
+<div id="admin-login">
+    <h3>Admin Login</h3>
+    <input type="password" id="admin-password" placeholder="Enter Admin Password">
+    <button onclick="login()">Login as Admin</button>
+</div>
+
+<!-- Main Interface -->
+<div id="main-content" style="display:none;">
     <header>
-        <div class="container">
-            <div class="nav">
-                <h1>Flashcards</h1>
-                <div class="buttonss">
-                    <button onclick="newShown()">New Card</button>
-                    <button onclick="delCard()">Del Card</button>
-                </div>
+        <div class="nav">
+            <h1>新単語</h1>
+            <div class="buttonss">
+                <button onclick="newShown()">追加</button>
+                <button onclick="delCard()">すべて削除</button>
+                <button onclick="deleteSelected()">選択を削除</button>
             </div>
         </div>
     </header>
-    <br>
-    <div class="container">
-        <div class="create-box">
-            <h2 style="text-align: center;">Create Flashcards</h2>
-            <label for="question">Question</label>
-            <textarea id="question"></textarea>
-            <br>
-            <label for="answer">Answer</label>
-            <textarea id="answer"></textarea>
-            <div>
-                <button onclick="addCard()">Save</button>
-                <button onclick="hideBox()">Close</button>
-            </div>
-        </div>
-    </div>
-    <div class="flashcards">
 
+    <div class="create-box">
+        <h2 style="text-align: center;">新しい単語</h2>
+        <label for="question">漢字</label><br>
+        <textarea id="question"></textarea><br>
+        <label for="answer">読み方</label><br>
+        <textarea id="answer"></textarea><br><br>
+        <button onclick="addCard()">保存</button>
+        <button onclick="hideBox()">閉める</button>
     </div>
-    <script src="script.js"></script>
+
+    <div class="flashcards"></div>
+</div>
+
+<!-- JavaScript тусад нь -->
+<script src="script.js"></script>
 </body>
 </html>
