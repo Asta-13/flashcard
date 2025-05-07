@@ -42,7 +42,7 @@ header {
 
 .create-box {
     border: 3px solid rgba(245, 245, 245, 0.698);;
-     width: 480px;
+     width: 50%;
      margin: auto;
      height:max-content;
      margin-top: 20px;
@@ -84,7 +84,7 @@ header {
 
 .flashcards {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 10px; /* Ажиллуулсан орон зай */
     padding: 20px;
@@ -92,7 +92,7 @@ header {
 
 .flashcard {
     display: flex;
-    width: 100%;
+    width: auto;
     max-width: 360px;
     box-sizing: content-box; /* border ба padding-ын хэмжээг гаргах */
     border: 2px solid #e48686; /* Border нэмэх */
